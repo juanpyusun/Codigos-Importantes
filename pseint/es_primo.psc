@@ -4,20 +4,25 @@ Algoritmo es_primo
 	Leer num;
 	contador=0;
 	cantidad_divisores=0;
-	Si num==0 o num==1 Entonces
-		Escribir "el numero ", num, " no es primo";
+	Si num==0 o num==1 Entonces		
+		Escribir "el numero ", num, " no es primo";		
 	SiNo
+		
 		Repetir
 			contador=contador+1;
-			Si num%contador==0 Entonces
-				cantidad_divisores=cantidad_divisores+1;
+			
+			Si num%contador==0 Entonces				
+				cantidad_divisores=cantidad_divisores+1;				
 			FinSi
+			
 		Hasta Que contador==TRUNC(num/2)
+		
 		Si cantidad_divisores>2 Entonces
 			Escribir "el numero ", num, " no es primo";
 		SiNo
 			Escribir "el numero ", num, " es primo";
 		FinSi
+		
 	FinSi
 	
 FinAlgoritmo
