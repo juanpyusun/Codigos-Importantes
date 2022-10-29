@@ -15,7 +15,7 @@ Algoritmo es_primo
 				cantidad_divisores=cantidad_divisores+1;				
 			FinSi
 			
-		Hasta Que contador==TRUNC(num/2)
+		Hasta Que ( contador==TRUNC(RAIZ(num)) o cantidad_divisores > 2 )
 		
 		Si cantidad_divisores>2 Entonces
 			Escribir "el numero ", num, " no es primo";
