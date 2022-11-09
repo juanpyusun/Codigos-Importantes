@@ -1,7 +1,7 @@
 Algoritmo ejercicio7
 	Definir hemoglobina Como Real;
 	Definir edad Como Entero;
-	Definir tener_anemia, texto_opcional, opcion_menu, sexo, texto_sexo Como Caracter;
+	Definir tener_anemia, texto_edad, opcion_menu, sexo, texto_sexo Como Caracter;
 	Repetir
 		Escribir "ingrese el sexo del paciente masculino o femenina (m/f)";
 		Leer sexo;
@@ -33,7 +33,7 @@ Algoritmo ejercicio7
 					Si edad<0 o edad>12 Entonces
 						Escribir "ingrese una edad en meses valida entre 0 y 12 incluidos";
 					Fin Si
-					texto_opcional=" meses de edad ";
+					texto_edad=" meses de edad ";
 				Hasta Que edad>=0 y edad<=12				
 			"M":
 				Repetir
@@ -42,7 +42,7 @@ Algoritmo ejercicio7
 					Si edad<0 o edad>12 Entonces
 						Escribir "ingrese una edad en meses valida entre 0 y 12 incluidos";
 					Fin Si
-					texto_opcional=" meses de edad ";	
+					texto_edad=" meses de edad ";	
 				Hasta Que edad>=0 y edad<=12	
 			"a":
 				Repetir
@@ -51,7 +51,7 @@ Algoritmo ejercicio7
 					Si edad<1 Entonces
 						Escribir "ingrese una edad en años superior a 1 año de edad";
 					Fin Si
-					texto_opcional=" años de edad ";	
+					texto_edad=" años de edad ";	
 				Hasta Que edad>1
 			"A":
 				Repetir
@@ -60,7 +60,7 @@ Algoritmo ejercicio7
 					Si edad<1 Entonces
 						Escribir "ingrese una edad en años superior a 1 año de edad";
 					Fin Si
-					texto_opcional=" años de edad ";
+					texto_edad=" años de edad ";
 				Hasta Que edad>1
 			De Otro Modo:
 				Escribir "ingrese una opcion valida";
@@ -108,5 +108,5 @@ Algoritmo ejercicio7
 		tener_anemia="NO TIENE";
 	Fin Si
 	
-	Escribir "DIAGNOSTICO: el paciente de sexo ", texto_sexo, " tiene ", edad, texto_opcional, "con un nivel de hemoglobina ", hemoglobina,"g% ", tener_anemia, " anemia";
+	Escribir "DIAGNOSTICO: el paciente de sexo ", texto_sexo, " tiene ", edad, texto_edad, "con un nivel de hemoglobina ", hemoglobina,"g% ", tener_anemia, " anemia";
 FinAlgoritmo
