@@ -1,25 +1,29 @@
 Algoritmo ejercicio7
 	Definir hemoglobina Como Real;
 	Definir edad Como Entero;
-	Definir tener_anemia, texto_opcional, opcion_menu, sexo Como Caracter;
+	Definir tener_anemia, texto_opcional, opcion_menu, sexo, texto_sexo Como Caracter;
 	Repetir
 		Escribir "ingrese el sexo del paciente masculino o femenina (m/f)";
 		Leer sexo;
 		Segun sexo Hacer
 			"m":
 				Escribir "Paciente masculino";
+				texto_sexo="masculino";
 			"M":
 				Escribir "Paciente masculino";
+				texto_sexo="masculino";
 			"f":
 				Escribir "Paciente femenina";
+				texto_sexo="femenina";
 			"F":
 				Escribir "paciente femenina";
+				texto_sexo="femenina";
 			De Otro Modo:
 				Escribir "ingrese una opcion valida";
 		Fin Segun
 	Hasta Que sexo=="m" o sexo=="M" o sexo=="f" o sexo=="F"
 	Repetir
-		Escribir "¿Desea ingresar la edad en meses (m) o años (a) ?";
+		Escribir "Â¿Desea ingresar la edad en meses (m) o aÃ±os (a) ?";
 		Leer  opcion_menu;
 		Segun opcion_menu Hacer
 			"m":
@@ -44,19 +48,19 @@ Algoritmo ejercicio7
 				Repetir
 					Escribir "ingrese la edad del paciente";
 					Leer edad;
-					Si edad>1 Entonces
-						Escribir "ingrese una edad en años superior a 1 año de edad";
+					Si edad<1 Entonces
+						Escribir "ingrese una edad en aÃ±os superior a 1 aÃ±o de edad";
 					Fin Si
-					texto_opcional=" años de edad ";	
+					texto_opcional=" aÃ±os de edad ";	
 				Hasta Que edad>1
 			"A":
 				Repetir
 					Escribir "ingrese la edad del paciente";
 					Leer edad;
-					Si edad>1 Entonces
-						Escribir "ingrese una edad en años superior a 1 año de edad";
+					Si edad<1 Entonces
+						Escribir "ingrese una edad en aÃ±os superior a 1 aÃ±o de edad";
 					Fin Si
-					texto_opcional=" años de edad ";
+					texto_opcional=" aÃ±os de edad ";
 				Hasta Que edad>1
 			De Otro Modo:
 				Escribir "ingrese una opcion valida";
@@ -104,5 +108,5 @@ Algoritmo ejercicio7
 		tener_anemia="NO TIENE";
 	Fin Si
 	
-	Escribir "DIAGNOSTICO: el paciente de sexo ", sexo, " tiene ", edad, texto_opcional, "con un nivel de hemoglobina ", hemoglobina,"g% ", tener_anemia, " anemia";
+	Escribir "DIAGNOSTICO: el paciente de sexo ", texto_sexo, " tiene ", edad, texto_opcional, "con un nivel de hemoglobina ", hemoglobina,"g% ", tener_anemia, " anemia";
 FinAlgoritmo
