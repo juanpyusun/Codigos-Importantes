@@ -1,19 +1,8 @@
-Funcion v <- ordenar_vector ( num, n )
-	Para i = 1 Hasta n Con Paso 1 Hacer
-		Para j = i+1 Hasta n Con Paso 1 Hacer
-			secuencia_de_acciones
-		Fin Para
-	Fin Para
-	
-Fin Funcion
-
-
-
 Algoritmo ejercicio10
 	Definir n, temp, num Como Entero;
 	Definir res Como Caracter;
 	
-	Escribir "el vector sera de tamaño 10";
+	Escribir "el vector sera de tamaÃ±o 10";
 	n = 10;
 	
 	Escribir "**** CREACION DEL VECTOR ****";
@@ -41,18 +30,13 @@ Algoritmo ejercicio10
 	
 	Escribir "**** NUEVOS ELEMENTOS DEL VECTOR ****";
 	Repetir
-		Escribir "¿Desea ingresar un nuevo elemento? (si/no)";
+		Escribir "Â¿Desea ingresar un nuevo elemento? (si/no)";
 		Leer res;
 		Si res == "si" Entonces
-			Escribir "¿cual será el nuevo elemento?";
+			Escribir "Â¿cual serÃ¡ el nuevo elemento?";
 			Leer num;
 			Para i = 1 Hasta n Con Paso 1 Hacer
-				Si v[i] < num Entonces
-					Para j = n Hasta i Con Paso -1 Hacer
-						v[j] = v[j-1];
-					Fin Para
-
-				Fin Si
+				//paila aun falta insertar y reordenar
 			Fin Para
 			Escribir "**** MOSTRANDO EL VECTOR ****";
 			Para i = 1 Hasta n Con Paso 1 Hacer
@@ -62,8 +46,14 @@ Algoritmo ejercicio10
 	Hasta Que res =="no";
 	
 	Escribir "**** MOSTRANDO EL VECTOR FINAL****";
+	Escribir Sin Saltar "(";
 	Para i = 1 Hasta n Con Paso 1 Hacer
-		Escribir v[i];
+		Si i == n Entonces
+			Escribir Sin Saltar v[i];
+		SiNo
+			Escribir Sin Saltar v[i], ", ";
+		Fin Si
 	Fin Para
+	Escribir Sin Saltar ")";
 	
 FinAlgoritmo
