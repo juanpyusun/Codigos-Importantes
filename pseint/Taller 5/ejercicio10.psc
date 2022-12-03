@@ -1,3 +1,17 @@
+Funcion imprimirVector (v, n)
+	Escribir "**** MOSTRANDO EL VECTOR ****";
+	Escribir Sin Saltar "(";
+	Para i = 1 Hasta n Con Paso 1 Hacer
+		Si i == n Entonces
+			Escribir Sin Saltar v[i];
+		SiNo
+			Escribir Sin Saltar v[i], ", ";
+		Fin Si
+	Fin Para
+	Escribir Sin Saltar ")";
+	Escribir "";	
+Fin Funcion
+
 Algoritmo ejercicio10
 	Definir n, temp, num Como Entero;
 	Definir res Como Caracter;
@@ -11,6 +25,8 @@ Algoritmo ejercicio10
 		Leer v[i];
 	Fin Para
 	
+	imprimirVector(v,n);
+	
 	Escribir "**** ORDENACION DEL VECTOR ****";
 	Para i = 1 Hasta n Con Paso 1 Hacer
 		Para j = i+1 Hasta n Con Paso 1 Hacer
@@ -22,11 +38,7 @@ Algoritmo ejercicio10
 		Fin Para
 	Fin Para
 	
-	
-	Escribir "**** MOSTRANDO EL VECTOR ****";
-	Para i = 1 Hasta n Con Paso 1 Hacer
-		Escribir v[i];
-	Fin Para
+	imprimirVector(v,n);
 	
 	Escribir "**** NUEVOS ELEMENTOS DEL VECTOR ****";
 	Repetir
@@ -38,22 +50,10 @@ Algoritmo ejercicio10
 			Para i = 1 Hasta n Con Paso 1 Hacer
 				//paila aun falta insertar y reordenar
 			Fin Para
-			Escribir "**** MOSTRANDO EL VECTOR ****";
-			Para i = 1 Hasta n Con Paso 1 Hacer
-				Escribir v[i];
-			Fin Para
+			imprimirVector(v,n);
 		Fin Si
 	Hasta Que res =="no";
 	
-	Escribir "**** MOSTRANDO EL VECTOR FINAL****";
-	Escribir Sin Saltar "(";
-	Para i = 1 Hasta n Con Paso 1 Hacer
-		Si i == n Entonces
-			Escribir Sin Saltar v[i];
-		SiNo
-			Escribir Sin Saltar v[i], ", ";
-		Fin Si
-	Fin Para
-	Escribir Sin Saltar ")";
+	imprimirVector(v,n);
 	
 FinAlgoritmo
