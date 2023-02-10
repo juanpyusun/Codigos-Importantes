@@ -4,3 +4,7 @@
 + Pseint
 + Tics
 ## Ciclo No 2
++ Java
++ Diseño Web
++ UML
++ BD-2
