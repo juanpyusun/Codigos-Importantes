@@ -28,15 +28,15 @@ SELECT c.first_name, c.last_name, s.status
  	FROM Customers c
     JOIN Shippings s ON c.customer_id = s.customer;  
     
---5. Usando alias y dos join
+--5. Usando alias y dos join  
 SELECT c.first_name, c.last_name, s.status, o.item, o.amount
 	FROM Customers c
     JOIN Shippings s ON c.customer_id = s.customer
-    JOIN Orders o ON c.customer_id = o.customer_id;
+    JOIN Orders o ON c.customer_id = o.customer_id;  
     
---6. Usando order by de forma descendente  y luego ascendente
-SELECT customer_id, amount FROM Orders ORDER BY amount DESC;
-SELECT item FROM Orders ORDER BY amount ASC;
+--6. Usando order by de forma descendente  y luego ascendente  
+SELECT customer_id, amount FROM Orders ORDER BY amount DESC;  
+SELECT item FROM Orders ORDER BY amount ASC;  
 
 --7. filtrando donde el apellido comience con R, donde el pais termine en A  
 SELECT first_name, last_name, age FROM Customers WHERE last_name LIKE 'R%';  
