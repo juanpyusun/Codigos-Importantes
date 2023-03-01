@@ -33,3 +33,7 @@ SELECT c.first_name, c.last_name, s.status, o.item, o.amount
 	FROM Customers c  
   	JOIN Shippings s ON c.customer_id = s.customer  
    	JOIN Orders o ON c.customer_id = o.customer_id  
+	
+--6. Usando ORDER BY de forma descendente (DESC) y luego ascendente (ASC)
+SELECT customer_id, amount FROM Orders ORDER BY amount DESC;
+SELECT item FROM Orders ORDER BY amount ASC
