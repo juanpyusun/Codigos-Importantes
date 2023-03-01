@@ -57,11 +57,12 @@ SELECT first_name FROM Customers WHERE (country = 'UK' AND age >23) ;
 --3. Usando join, la siguiente consulta devuelve  first_name, last_name de la tabla customers pero hace un join por medio de las columnas customer_id de la tabla Customers y customer de la tabla Shippings para mostrar la columna status
 SELECT first_name, last_name, status
 	FROM Customers
-	JOIN Shippings ON Customers.customer_id = Shippings.customer;
+	JOIN Shippings ON Customers.customer_id = Shippings.customer;  
+	
  --4. Usando los alias c y s para nombrar las tablas Customers y Shippings respectivamente
 SELECT c.first_name, c.last_name, s.status
  	FROM Customers c
-    JOIN Shippings s ON c.customer_id = s.customer;
+    JOIN Shippings s ON c.customer_id = s.customer;  
     
 --5. Usando alias y dos join
 SELECT c.first_name, c.last_name, s.status, o.item, o.amount
