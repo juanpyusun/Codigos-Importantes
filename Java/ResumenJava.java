@@ -33,6 +33,7 @@ public class ResumenJava {
         
         JOptionPane.showMessageDialog(null,"Hola mundo");
         JOptionPane.showConfirmDialog(null, "Este es otro mensaje pero con mas botoncitos");
+        JOptionPane.showMessageDialog(null, "mira el titulo y no hay icono", "Titulo especial :D",-1);
         JOptionPane.showMessageDialog(null, "mira el titulo y el icono de error", "Titulo especial :D",0);
         JOptionPane.showMessageDialog(null, "probando icono de informacion", "Titulo especial :D",1);
         JOptionPane.showMessageDialog(null, "probando icono de advertencia", "Titulo especial :D",2);
